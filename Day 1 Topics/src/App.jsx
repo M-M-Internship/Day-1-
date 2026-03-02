@@ -1,12 +1,19 @@
-function Greeting({ name, power }) {
-  return <h1>Hello {name} {power}</h1>
-}
-function App() {
+import { useState } from "react"
+
+function Counter() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
- <Greeting name="IronMan"  />
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>
+        Increase
+      </button>
+      <button onClick={() => setCount(count - 1)}>
+        Decrease
+      </button>
     </>
   )
 }
 
-export default App
+export default Counter
