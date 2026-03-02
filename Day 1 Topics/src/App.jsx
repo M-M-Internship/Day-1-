@@ -1,19 +1,11 @@
-function Greeting() {
-  const name = "Chetan"
-  const age = 21
-
-  return (
-    <>
-      <h1>Hello {name} 🚀</h1>
-      <p>You are {age} years old</p>
-    </>
-  )
+function Greeting({ name, power }) {
+  return <h1>Hello {name} {power}</h1>
 }
 function App() {
   return (
-    <div>
-      <Greeting />
-    </div>
+    <>
+ <Greeting name="IronMan"  />
+    </>
   )
 }
 
